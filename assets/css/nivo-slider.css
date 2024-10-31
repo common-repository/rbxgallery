@@ -1,0 +1,302 @@
+/*
+ * jQuery Nivo Slider v3.2
+ * http://nivo.dev7studios.com
+ *
+ * Copyright 2012, Dev7studios
+ * Free to use and abuse under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+/* The Nivo Slider styles */
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+
+
+/* orman */
+
+
+.theme-orman.slider-wrapper {
+    background-color:#ffffff;  padding:18px; border: 1px solid #FFFFFF;
+	box-shadow:0px 0px 6px rgba(242,241,241,0.9) inset, 0px 0px 3px rgba(210,209,209,0.9);
+       margin:0 auto;
+    
+    position:relative;
+}
+
+.theme-orman .nivoSlider {
+    position:relative;
+    width:568px;
+    height:268px;
+   border: 1px solid #e4e4e4; 
+	box-shadow:0px 0px 6px rgba(242,241,241,0.9), 0px 0px 4px rgba(243,243,243,0.9) inset;
+    background:url(../images/orman/loading.gif) no-repeat 50% 50%;
+}
+.theme-orman .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    width:568px; /* Make sure your images are the same size */
+    height:268px; /* Make sure your images are the same size */
+}
+.theme-orman .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-orman .nivo-controlNav {
+    position:absolute;
+	left:50%;
+	bottom:-45px;
+    margin-left:-30px; /* Tweak this to center bullets */
+}
+.theme-orman .nivo-controlNav a {
+    display:block;
+    width:10px;
+    height:10px;
+    background:url(../images/orman/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:7px;
+    float:left;
+}
+.theme-orman .nivo-controlNav a.active {
+    background-position:0 -10px;
+}
+
+.theme-orman .nivo-directionNav a {
+	display:block;
+	width:25px;
+	height:200px;
+	background:url(../images/orman/arrows.png) no-repeat 0% 50%;
+	text-indent:-9999px;
+	border:0;
+    top:40px;
+}
+.theme-orman a.nivo-nextNav {
+	background-position:100% 50%;
+	right:-40px;
+    padding-right:20px;
+}
+.theme-orman a.nivo-prevNav {
+	left:-40px;
+    padding-left:20px;
+}
+
+.theme-orman .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-orman .nivo-caption a { 
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-orman .nivo-caption a:hover { 
+    color:#fff;
+}
+
+.theme-orman .ribbon {
+    background:url(../images/orman/ribbon.png) no-repeat;
+    width:111px;
+    height:111px;
+    position:absolute;
+    top:-3px;
+    left:56px;
+    z-index:300;
+}
+
+
+/* pascal */
+
+
+.theme-pascal.slider-wrapper {
+    background-color:#ededed;  padding:18px;  
+	box-shadow:0px 0px 1px rgba(246,246,246,0.9) inset, 0px 0px 3px rgba(210,209,209,0.9); border-radius:10px;
+	-moz-border-radius:10px; -webkit-border-radius:10px; -o-border-radius:10px;
+    margin:0 auto;
+   
+    position:relative;
+}
+
+.theme-pascal .nivoSlider {
+    position:relative;
+    background-color:#fafafa; position:relative; float:left;  border: 1px solid #e4e4e4; 
+	box-shadow:0px 0px 6px rgba(242,241,241,0.9), 0px 0px 4px rgba(243,243,243,0.9) inset;
+    background:url(../images/pascal/loading.gif) no-repeat 50% 50%;
+}
+.theme-pascal .nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+    
+}
+.theme-pascal .nivoSlider a {
+    border:0;
+    display:block;
+}
+
+.theme-pascal .nivo-controlNav {
+    background:url(../images/pascal/tag.png) no-repeat;
+    width:351px;
+    height:40px;
+    position:absolute;
+    left:25%; /* Tweak this to center bullets */
+    bottom:-42px;
+    padding:8px 0 0 45px;
+    z-index:20;
+}
+.theme-pascal .nivo-controlNav a {
+    display:block;
+    width:22px;
+    height:22px;
+    background:url(../images/pascal/bullets.png) no-repeat;
+    text-indent:-9999px;
+    border:0;
+    margin-right:3px;
+    float:left;
+}
+.theme-pascal .nivo-controlNav a.active {
+    background-position:0 -22px;
+}
+
+.theme-pascal .nivo-directionNav a {
+	display:none;
+}
+
+.theme-pascal .nivo-caption {
+    bottom:40%;
+    left:auto;
+    right:0px;
+    width:auto;
+    max-width:630px;
+    overflow:hidden;
+    background:#fff;
+    text-shadow:none;
+    font-family: arial, serif;
+    color:#4c4b4b;
+}
+.theme-pascal .nivo-caption p {
+    padding:5px 15px;
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+.theme-pascal .nivo-caption a { 
+    color:#333;
+    font-weight:bold;
+    font-size:27px;
+    text-transform:uppercase;
+}
+
+.theme-pascal .ribbon {
+    background:url(../images/pascal/ribbon.png) no-repeat;
+    width:111px;
+    height:111px;
+    position:absolute;
+    top:-8px;
+    left:-8px;
+    z-index:300;
+}
